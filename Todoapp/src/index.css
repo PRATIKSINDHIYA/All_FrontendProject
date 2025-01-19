@@ -1,0 +1,175 @@
+:root {
+  --primary-bg: #1a1a2e;
+  --secondary-bg: #16213e;
+  --primary-color: #ffffff;
+  --accent-color: #ff5733;
+  --hover-accent: #ff8d72;
+  --secondary-color: #6a2c70;
+  --hover-secondary: #8a4ca5;
+  --input-bg: #e5e5e5;
+  --input-text: #333333;
+  --task-bg: #0f3460;
+  --task-hover: #344fa1;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--primary-color);
+  transition: background 0.3s ease;
+}
+
+/* Main Container */
+.main {
+  background: var(--secondary-bg);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.main:hover {
+  transform: scale(1.03);
+}
+
+/* Heading Section */
+.heading h1 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: var(--accent-color);
+}
+
+.heading img {
+  width: 70px;
+  margin-bottom: 10px;
+}
+
+/* Input Section */
+.input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 2px solid var(--accent-color);
+  border-radius: 30px;
+  padding: 5px 10px;
+  background: var(--input-bg);
+}
+
+.input input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 30px;
+  color: var(--input-text);
+  background: transparent;
+}
+
+.input .add-btn {
+  background: var(--accent-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.input .add-btn:hover {
+  background: var(--hover-accent);
+  transform: rotate(15deg);
+}
+
+/* Content Section */
+.content {
+  margin-top: 20px;
+  width: 99%;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--task-bg);
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  font-size: 16px;
+  gap: 10px;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.todo-item:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background: var(--task-hover);
+}
+
+.todo-item .task {
+  flex: 1;
+}
+
+.todo-item .edit-btn,
+.todo-item .delete-btn {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.todo-item .edit-btn {
+  background: var(--success-color);
+  color: var(--primary-color);
+}
+
+.todo-item .edit-btn:hover {
+  background: var(--hover-secondary);
+}
+
+.todo-item .delete-btn {
+  background: var(--danger-color);
+  color: var(--primary-color);
+}
+
+.todo-item .delete-btn:hover {
+  background: #ff6f6f;
+}
+
+/* Clear List Button */
+.checklist-btn {
+  margin-top: 20px;
+  background: var(--accent-color);
+  color: var(--primary-color);
+  padding: 12px 25px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.checklist-btn:hover {
+  background: var(--hover-accent);
+  transform: scale(1.1);
+}
